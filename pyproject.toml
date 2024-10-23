@@ -59,3 +59,17 @@ exclude_lines = [
   "if __name__ == .__main__.:",
   "if TYPE_CHECKING:",
 ]
+
+
+[tool.hatch.envs.dev]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pre-commit",
+  "pytest",
+  "pytest-sugar",
+  "pytest-xdist",
+  "git-cliff",
+  "bump-my-version",
+  "hatch-pip-compile",
+]
+lock-filename = "requirements-dev.txt"
